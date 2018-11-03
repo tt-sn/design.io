@@ -49,7 +49,7 @@ a{text-decoration: none;}
 #particles {
   position: fixed;
   z-index: -5;
-  width: 100vw;
+  width: 200vw;
   height: 100%;
   overflow: hidden;
 }
