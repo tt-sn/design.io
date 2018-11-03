@@ -6,11 +6,10 @@ body {
   background-color:white;
   min-width: 380px;
   font-size: 3vw;
-  overflow: visible;
+
 }
 #wrapper {
-  width:100%;
-  overflow:hidden;
+
 }
 .text{
     font-family: "Sawarabi Mincho"; 
