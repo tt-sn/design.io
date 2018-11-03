@@ -43,7 +43,7 @@ a{text-decoration: none;}
 .bar-top img{
   position: absolute;
   right: 0;
-  width: 45vw;
+  width: 200px;
 }
 
 #particles {
@@ -64,7 +64,7 @@ a{text-decoration: none;}
 }
 
 .panel1{
-  width: 100vw;
+  width: 200vw;
   z-index: 10;
   background-color: rgba(255,255,255,0.2);
   color: black;
@@ -72,7 +72,7 @@ a{text-decoration: none;}
 }
 
 .panel2{
-  width:100vw;
+  width:200vw;
   z-index: 10;
   background-color: rgba(0,0,0,0.8);
   color: white;
