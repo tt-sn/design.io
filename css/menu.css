@@ -6,7 +6,7 @@
 }
 .menu {
   position: absolute;
-  overflow: auto;
+
   -webkit-overflow-scrolling: touch;
   z-index:52;
   left: 83vw;
