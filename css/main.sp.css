@@ -1,0 +1,160 @@
+
+#index{
+  font-family: 'Electrolize', sans-serif;
+  color: black;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+}
+
+#index-title{
+  font-size: 13vw;
+}
+
+#index-list{
+  text-align: center;
+  padding: 20px 0;
+  font-size: 5vw;
+}
+
+#index-list a:link{color: black}
+#index-list a:visited{color: black}  
+
+#Profile{
+  z-index: 1;
+  padding: 0 10vw;
+  text-align: left;
+  color: white;
+}
+
+#Myname{
+  font-family: 'Electrolize', sans-serif;
+  padding-top: 50px;
+  font-size: 10vw;
+}
+
+#Profile:nth-last-child(2){
+font-family: 'Electrolize', sans-serif;
+color:white;
+padding: 20px 0;
+}
+
+#Profile .text{
+  padding: 0 0vw;
+}
+
+#Study{ 
+  z-index: 1;
+  padding-top: 100px;
+  color: black;
+  }
+
+.Study-name{
+    font-family: "Sawarabi Mincho";
+    text-align: center;
+    padding: 30px 0;
+    font-size: 7vw;
+}
+
+#Study .title{
+  text-align: right;
+  padding: 0 10vw;
+  }
+
+.Study-block{
+  display: block;
+}
+
+.Study-block hr{
+  width: 80vw;
+  left: 10vw;
+  position: relative;
+  margin: 30px 0;
+  }
+
+#Study-text-1{ 
+  font-family: "Sawarabi Mincho";
+  text-align: right;
+  padding-right: 10vw;
+  font-size: 20px;
+  }
+
+.Study-block-text{
+  display: block;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  background-color: rgba(255,255,255,0.8);
+  position: relative;
+  font-family: "Sawarabi Mincho";
+  font-size: 3vwpx;
+}
+
+.Study-pic{
+  display: block;
+  width: 100vw;
+}
+
+#Work{
+text-align: center;
+}
+
+#Design{
+  display: block;
+  margin: auto;
+}
+
+#Photo{
+  display: block;
+  margin: auto;
+}
+
+#Application{
+  display: block;
+  margin: auto;
+}
+
+#Application img{
+  width: 40vw;
+  margin-bottom: 50px;
+}
+
+.App-name{
+  font-size:10vw;
+  padding: 30px 0;
+  text-align: center;
+}
+
+#Contact{
+  display: block;
+  font-family: 'Electrolize', sans-serif;
+  text-align: center;  
+}
+
+#Contact .text{
+  font-family: 'Electrolize', sans-serif;
+  font-size: 4vw;
+}
+
+#nav ul {
+list-style-type: none; /*箇条書きのポッチを消す*/
+text-align:center /*左右中央寄せは親要素に対して指定*/
+}
+
+/* ↓id="nav"の中のulの中のliに対してCSSを適用*/
+#nav ul li { 
+  display: inline-block;/*inline-blockにします*/
+  width: auto;/*幅も指定できる*/
+  height: 20vw;/*高さも指定できる*/
+  padding: 10px 0;/*余白も指定できる*/
+  margin: 10px 0;/*余白も指定できる*/
+  vertical-align: middle;/*縦の表示位置も指定できる*/
+  }
+
+#nav ul li img{
+  width: 20vw;
+  height: 20vw;
+}

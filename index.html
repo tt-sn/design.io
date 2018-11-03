@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+
+<head>
+    <title>T.S's Portfolio Page</title>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Setting.css">
+    <link rel="stylesheet" type="text/css" href="css/main.sp.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/photo.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Electrolize" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="js/sample.js"></script>
+    <script type="text/javascript" src="./js/jquery.particleground.js"></script>
+    <script type="text/javascript" src="./js/demo.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <div class="bar-top">
+        <div class="fixed">
+            <img src="image/mark.png">
+        </div>
+    </div>
+</head>
+
+<body>
+    <!--メニューの設定-->
+    <div id="men">
+            <div class="menu">
+                <span class="fa hidden"><a href="#panel0"><p>i<br>ndex</p></a></span>
+                <span class="fa hidden"><a href="#Profile"><p>P<br>rofile</p></a></span>
+                <span class="fa hidden"><a href="#Study"><p>S<br>tudy</p></a></span>
+                <span class="fa hidden"><a href="#Work"><p>W<br>ork</p></a></span>
+                <span class="fa hidden"><a href="#Contact"><p>C<br>ontact</p></a></span>
+
+                <span class="fa hidden"><a href="#Design"><p>D</p></a></span>
+                <span class="fa hidden"><a href="#Photo"><p>P</p></a></span>
+                <span class="fa hidden"><a href="#Application"><p>A</p></a></span>
+
+                <span class="fa hidden"><a href="https://www.twitter.com/_ttsn_" target="_blank"><p>T</p></a></span>
+                <span class="fa hidden"><a href="https://www.instagram.com/ttsn.06" target="_blank"><p>I</p></a></span>
+
+                <span class="hidden">
+                <a href="http://twitter.com/?status=TS's Portfolio Page http://ttsn.ml" target="_blank"><i class="fa fa-twitter"></i></a>
+            </span>
+                <span class="hidden">
+                <a href="https://github.com/tt-sn/" target="_blank">
+                <i class="fa fa-github"></i></a>
+            </span>
+
+                <span class="fa fa-times fa-inverse f-fw hidden"></span>
+                <span class="fa hidden"></span>
+                <!--暗転幕-->
+                <span class="fa fa-bars fa-2x fa-inverse f-fw"></span>
+            </div>
+    </div>
+
+    <div id="particles">
+        <div id="intro"></div>
+    </div>
+    <div>
+
+        <!--indexの設定-->
+        <div id="panel0">
+            <div id="index">
+                <p id="index-title">T.S's Portfolio Page</p>
+                <div class="spansize"></div>
+                <p id="index-list">
+                    <a href="#Profile" class="slide">/&emsp;Profile&emsp;/</a><br>
+                    <a href="#Study" class="slide">/&emsp;Study&emsp;/</a><br>
+                    <a href="#Work" class="slide">/&emsp;Work&emsp;/</a><br>
+                    <a href="#Contact" class="slide">/&emsp;Contact&emsp;/</a><br>
+                </p>
+            </div>
+        </div>
+
+        <!--Profileの設定-->
+        <div class="panel2">
+            <div id="Profile">
+                <div class="spansize"></div>
+                <p class="title">Profile:</p>
+                <p id="Myname">Tomohiro Sasaki</p>
+
+                <p id="Profile-list">
+                    <br> 1995/8/18
+                    <br> Skill : UnityC#／HTML,CSS／JS
+                    <br> Design : Photo／UI<br>
+                    <br>
+                </p>
+                <p class="text">
+                    和歌山大学の学生、佐々木智弘です。 Unityを用いた水のエフェクトの生成の研究をしています。扱っている言語はUnityC#，GL/SL(UnityShader)です。また、趣味でWebページ制作(HTML,CSS,JS)を行ったり、UIデザインやポスターのデザインなども行っています。もちろんCG系なので、ゲームやアニメも好きです。多趣味なのでいくら時間があっても足らないのが悩みです。
+                </p>
+                <div class="spansize"></div>
+            </div>
+        </div>
+
+        <!--Studyの設定-->
+        <div class="panel1">
+            <div id="Study">
+                <p class="title">───Study:</p>
+                <p id="Study-text-1">研究室で行っている研究の紹介です。<br> タイトル：人体動作に連動した3D水流ビジュアルエフェクトの生成
+                </p>
+                <div class="spansize"></div>
+                <!--ここから１つ目-->
+                <p class="Study-name">&emsp;/&emsp;水の見た目の生成&emsp;/&emsp;</p>
+                <div class="Study-block">
+                    <img src="image/water.jpg" class="Study-pic">
+                    <div class="spansize"></div>
+                    <hr>
+                    <div class="Study-block-text">
+                        UnityのShaderを使って、水を表現した作品になります。画像では、球のカメラ方向の逆方向にある背景をテクスチャとして取得し、球の頂点の法線ベクトルに則って歪ませることで水の屈折を再現しました。
+                    </div>
+                    <hr>
+                </div>
+                <div class="spansize"></div>
+                <!--ここから2つ目-->
+                <p class="Study-name">/&emsp;自由位置で水を生成&emsp;/</p>
+                <div class="Study-block">
+                    <img src="image/metaball.gif" class="Study-pic">
+                    <div class="spansize"></div>
+                    <hr>
+                    <div class="Study-block-text">
+                        Unity内の３次元座標の任意の位置*から自由に水を生成することにより、非現実なエフェクトとして用いることができます。(*:MC法というボリューム空間を区切る軽量化の手法を用いてるので、範囲の制約があります。)
+                    </div>
+                    <hr>
+                </div>
+                <!--ここから3つ目-->
+                <p class="Study-name">&emsp;/&emsp;水の形状の生成&emsp;/&emsp;</p>
+                <div class="Study-block">
+                    <img src="image/move.gif" class="Study-pic">
+                    <div class="spansize"></div>
+                    <hr>
+                    <div class="Study-block-text">
+                        水や雲など、CGにおける流体の形状の表現に用いられる、メタボールという”滑らかな曲線”を生成する手法を用いて、Unity内で動的に”水っぽい物体”を生成できるようにしました。
+                    </div>
+                    <hr>
+                </div>
+                <!--ここから4つ目-->
+                <p class="Study-name">&emsp;/&emsp;身体から水を生成&emsp;/&emsp;</p>
+                <div class="Study-block">
+                    <img src="image/body.gif" class="Study-pic">
+                    <div class="spansize"></div>
+                    <hr>
+                    <div class="Study-block-text">
+                        Kinectを用いて、人体の部位の座標を取得。そして加速度を計算することによって動きに合わせて飛んだりする水を生成することができます。 主にゲームやCGを用いたライブステージなどでの利用が期待できます。
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            <div class="spansize"></div>
+        </div>
+
+        <!--Workの設定-->
+        <div class="panel2">
+            <div id="Work">
+                <div class="spansize"></div>
+                <p class="title">Work:</p>
+                <div class="text">
+                    <p>今までの作品です。主に趣味で行ったものや部活動で作成した作品などのうち、代表的モノをまとめています。</p>
+                </div>
+                <div class="spansize"></div>
+
+                <!--Designの設定-->
+                <div id="Design">
+                    <p class="title">Design:</p>
+                    <p class="text">今ポスターや名刺などの今までに制作した作品を載せています</p>
+                    <section class="photos">
+                        <img data-original="image/musicout.jpg" src="image/dummy.gif">
+                        <!--<img src="image/gsk.png" alt="gsk">-->
+                        <img data-original="image/box_poster.jpg" src="image/dummy.gif">
+                        <img data-original="image/meishi1.jpg" src="image/dummy.gif">
+                        <img data-original="image/meishi2.jpg" src="image/dummy.gif">
+                        <img data-original="image/meishi3.png" src="image/dummy.gif">
+                    </section>
+                </div>
+                <div class="spansize"></div>
+
+                <!--Photoの設定-->
+                <div id="Photo">
+                    <p class="title">Photo:</p>
+                    <p class="text">主に京都ですが、四季満点の寺院などの観光がすごく好きなので、よく観光にでかけます。観光先で撮ったお気に入り写真をこちらに載せています。</p>
+                    <section class="photos">
+                        <img data-original="image/maccha1.JPG" src="image/dummy.gif">
+                        <img data-original="image/kibune.JPG" src="image/dummy.gif">
+                        <img data-original="image/yasaka.png" src="image/dummy.gif">
+                    </section>
+                </div>
+
+                <!--Applicationの設定-->
+                <div id="Application">
+                    <p class="title">Application:</p>
+                    <p class="App-name">記憶電卓</p>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.ttsn.MemoryCalculator" target="_blank">
+                        <img src="image/MCicon.png">
+                    </a>
+
+                    <p class="text">UnityのuGUIの勉強をする際に作った電卓アプリです(Android用無料アプリ)。アプリの開発は初めてだったので結構時間がかかりました（約２か月）。特に電卓は例外処理なども多く考慮しなくてはいけなかったため、大変でした。<br>
+                        <a href="https://play.google.com/store/apps/details?id=com.ttsn.MemoryCalculator" target="_blank">『記憶電卓』</a>-Tomohiro
+                        Sasaki
+                    </p>
+                    <div class="spansize"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!--Contactの設定-->
+        <div class="panel1">
+            <div id="Contact">
+                <p class="title">Contact:</p>
+                <p class="text">mail:<br>rb.totto@gmail.com</p>
+                <div id="nav">
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/ttsn.06" target="_blank"><img src="image/instagram.png"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/_ttsn_" target="_blank"><img src="image/twitter.png"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $("img").lazyload({ effect: 'fadeIn', effectspeed: 200 });
+        </script>
+
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+        <script>
+            window.sr = ScrollReveal({ reset: true, mobile: true });
+            sr.reveal('hr', { origin: 'left', distance: '80%', duration: 500, scale: 1.0, delay: 100, opacity: 1, });
+
+            sr.reveal('.title', { origin: 'bottom', distance: '0%', duration: 800, scale: 1.2, delay: 100, opacity: 0, });
+
+            sr.reveal('.text', { origin: 'top', distance: '0%', duration: 800, scale: 0.8, delay: 100, opacity: 0, });
+
+            sr.reveal('.Study-block-text', { origin: 'left', distance: '80%', duration: 500, scale: 1.0, delay: 350, opacity: 0.5, });
+
+            sr.reveal('body img', { origin: 'bottom', distance: '0%', duration: 800, scale: 0.5, delay: 200, opacity: 0, });
+
+        </script>
+    </div>
+</body>
+
+</html>
