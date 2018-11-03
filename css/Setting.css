@@ -7,6 +7,10 @@ body {
   min-width: 380px;
   font-size: 3vw;
 }
+#wrapper {
+  width:100%;
+  overflow:hidden;
+}
 .text{
     font-family: "Sawarabi Mincho"; 
     padding: 0 10vw;
