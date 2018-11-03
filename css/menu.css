@@ -1,11 +1,13 @@
 #men{
   position: fixed;
-    top: 0;
+  top: 0;
   z-index: 50;
   height: 100%;
 }
 .menu {
   position: absolute;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   z-index:52;
   left: 83vw;
   top:4vw;
