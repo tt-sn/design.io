@@ -79,8 +79,8 @@ padding: 20px 0;
 #Study-text-1{ 
   font-family: "Sawarabi Mincho";
   text-align: right;
-  padding:0 10vw;
-  font-size: 20px;
+  padding:0 10%;
+  font-size: 18px;
   }
 
 .Study-block-text{
@@ -95,7 +95,7 @@ padding: 20px 0;
 
 .Study-pic{
   display: block;
-  width: 100vw;
+  width: 100%;
 }
 
 #Work{
