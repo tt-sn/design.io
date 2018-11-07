@@ -52,6 +52,11 @@ a{text-decoration: none;}
   overflow: hidden;
 }
 
+.flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 #panel0{
   height: 750px;
   width: 100%;
