@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>文字変換まとめ！</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="./converter.js"></script>
+<script type="text/javascript" src="./outside.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+<body>
+    <h2>文字変換まとめ</h2>
+<hr>
+<!--ここに広告を挿入-->
+<form name="Box_form" action="index.html">
+  <textarea type="textbox" name="textbox" id="text" value="" placeholder="変換したい文を貼り付けてください"></textarea>
+</form>
+
+<p><div class="flex">
+<input type="image" value="全角→半角"      src="./img/001.png" onclick="convert(this)" class="button" title="1"/>
+<input type="image" value="半角→全角"      src="./img/002.png" onclick="convert(this)" class="button" title="2"/>
+<input type="image" value="かな→カナ"      src="./img/003.png" onclick="convert(this)" class="button" title="3"/>
+<input type="image" value="カナ→かな"      src="./img/004.png" onclick="convert(this)" class="button" title="4"/>
+<input type="image" value="スペース挿入"   src="./img/006.png" onclick="insertSpace()" class="button"/>
+<input type="image" value="スペース削除"   src="./img/007.png" onclick="deleatSpace()" class="button"/>
+<input type="image" value="大文字→小文字"  src="./img/008.png" onclick="toSmall()"     class="button"/>
+<input type="image" value="小文字→大文字"  src="./img/009.png" onclick="toBig()"       class="button"/>
+<input type="image" value="濁点挿入"       src="./img/005.png" onclick="insertMark()"  class="button"/>
+</div>
+</p>
+<p><img src="./img/vert.png" class="pic" /></p>
+<textarea type="text" value="" id="Output" placeholder="変換後の文字列が表示されます" readonly></textarea>
+
+<!--ここに広告を挿入-->
+
+  <div class="wrap">
+    <p><a href="#demo1" class="modal"><input type="image" src="./img/copyBtn.png" class="copyBtn" ontouchstart=""/></a></p>
+    <div class="modalBox" id="demo1">
+        <div class="modalInner">
+          コピーしました
+        </div>
+    </div>
+  </div>
+
+<footer class = "footer">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="【ページのURL】" data-text="文字変換まとめ！【全角半角文字置換etc】">Tweet</a>
+    <br>
+    <div class="line-it-button" style="display: none;" data-lang="ja" data-type="share-b" data-url="file:///C:/Users/share/Desktop/henkann/index.html"></div>
+ <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+</footer>
+<!--tweet-->
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+</script>
+
+<!--line-->
+
+</body>
+</html>
