@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>文字変換まとめ！</title>
-  <meta name="viewport" content="width=device-width" >
+<meta name="viewport" content="width=device-width" >
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="./converter.js"></script>
 <script type="text/javascript" src="./outside.js"></script>
@@ -52,48 +52,10 @@
   </div>
 
 
-
-
-
-<script>
-$(document).ready(function(){
-    $('#copy_btn').on('click', function() {
-        var target = null;
-        var p = null;
-        window.getSelection().removeAllRanges();
-        if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
-            target = document.querySelector('#Output');
-            target.contentEditable  = true;
-            target.readOnly = false;
-        } else {
-            p = document.createElement('p');
-            p.setAttribute('id', 'target')
-            document.body.appendChild(p);
-            p.innerHTML = $('#Output').val();
-            target = document.querySelector('#target');
-        }
-        var range = document.createRange();
-        range.selectNode(target);
-        window.getSelection().addRange(range);
-        document.execCommand("copy");
-        if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
-            target.contentEditable  = false;
-            target.readOnly = true;
-        } else {
-            document.body.removeChild(p);
-        }
-        window.getSelection().removeAllRanges();
-    });
-});
-</script>
-
-
-
-<footer class = "footer">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-url="【ページのURL】" data-text="文字変換まとめ！【全角半角文字置換etc】">Tweet</a>
-    <br> 
-    <div class="line-it-button" style="display: none;" data-lang="ja" data-type="share-a" data-url="https://tt-sn.github.io/design.io/converter/"></div>
- <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script
+<footer class="footer">
+    <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://tt-sn.github.io/design.io/converter/" data-text="文字変換まとめ！【全角半角文字置換etc】">Tweet</a></li> 
+    <li><div class="line-it-button" style="display: none;" data-lang="ja" data-type="share-a" data-url="https://tt-sn.github.io/design.io/converter/"></div></li>
+ <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 </footer>
 <!--tweet-->
 <script>

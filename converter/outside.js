@@ -1,4 +1,34 @@
 $(document).ready(function(){
+    $('#copy_btn').on('click', function() {
+        var target = null;
+        var p = null;
+        window.getSelection().removeAllRanges();
+        if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
+            target = document.querySelector('#Output');
+            target.contentEditable  = true;
+            target.readOnly = false;
+        } else {
+            p = document.createElement('p');
+            p.setAttribute('id', 'target')
+            document.body.appendChild(p);
+            p.innerHTML = $('#Output').val();
+            target = document.querySelector('#target');
+        }
+        var range = document.createRange();
+        range.selectNode(target);
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
+            target.contentEditable  = false;
+            target.readOnly = true;
+        } else {
+            document.body.removeChild(p);
+        }
+        window.getSelection().removeAllRanges();
+    });
+});
+
+$(document).ready(function(){
   $('.modal').on('click',function(){
   
       //.modalについたhrefと同じidを持つ要素を探す
@@ -43,7 +73,6 @@ $(document).ready(function(){
         $("#copyInput").remove();
         }
 
-
       copyBtn();
 
         //wrapクリックされたら
@@ -51,11 +80,8 @@ $(document).ready(function(){
         clickAction();
         return false;
         //2秒後に消える
-        setTimeout(clickAction,2000);
+        setTimeout(clickAction,1500);
         return false;
         });
-
-      
-
   });
 });
