@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 <body>
+  <div id="webbox">
     <h2>文字変換まとめ</h2>
 <hr>
 <!--ここに広告を挿入-->
@@ -17,7 +18,9 @@
   <textarea type="textbox" name="textbox" id="text" value="" style="font-size:20px" placeholder="変換したい文を貼り付けてください"></textarea>
 </form>
 
-<p><div class="flex">
+<p>
+  <div class = "flexbox">
+<div class="flex">
 <input type="image" value="全角→半角"      src="./img/001.png" onclick="convert(this)" class="button" title="1"/>
 <input type="image" value="半角→全角"      src="./img/002.png" onclick="convert(this)" class="button" title="2"/>
 <input type="image" value="かな→カナ"      src="./img/003.png" onclick="convert(this)" class="button" title="3"/>
@@ -28,9 +31,10 @@
 <input type="image" value="小文字→大文字"  src="./img/009.png" onclick="toBig()"       class="button"/>
 <input type="image" value="濁点挿入"       src="./img/005.png" onclick="insertMark()"  class="button"/>
 </div>
+  </div>
 </p>
 <p><img src="./img/vert.png" class="pic" /></p>
-<textarea type="text" value="" id="Output" placeholder="変換後の文字列が表示されます" readonly></textarea>
+<textarea type="text" value="" id="Output" placeholder="変換後の文字列が表示されます" style="font-size:25px" readonly></textarea>
 
 <!--ここに広告を挿入-->
 
@@ -45,7 +49,7 @@
 
 <footer class = "footer">
     <a href="https://twitter.com/share" class="twitter-share-button" data-url="【ページのURL】" data-text="文字変換まとめ！【全角半角文字置換etc】">Tweet</a>
-    <br>
+    <br> 
     <div class="line-it-button" style="display: none;" data-lang="ja" data-type="share-b" data-url="file:///C:/Users/share/Desktop/henkann/index.html"></div>
  <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 </footer>
@@ -56,6 +60,6 @@
 </script>
 
 <!--line-->
-
+  </div>
 </body>
 </html>

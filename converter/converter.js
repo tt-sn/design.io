@@ -48,7 +48,6 @@ function insertMark(){
         afterText += a.charAt(i); //i文字目を抽出
         afterText += "゛";
     }
-    alert(afterText);
     a = afterText.replace(/%SP/g,'\n');
 
     document.getElementById("Output").value = a;
