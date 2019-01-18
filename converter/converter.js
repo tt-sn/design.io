@@ -1,3 +1,4 @@
+
 function convert( obj ){
 
     var textData = Box_form.textbox.value; //フォームからの入力を受け付ける

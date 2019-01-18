@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>文字変換まとめ！</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="./converter.js"></script>
 <script type="text/javascript" src="./outside.js"></script>
 
@@ -34,12 +34,15 @@
   </div>
 </p>
 <p><img src="./img/vert.png" class="pic" /></p>
-<textarea type="text" value="" id="Output" placeholder="変換後の文字列が表示されます" style="font-size:25px" readonly></textarea>
+
 
 <!--ここに広告を挿入-->
-
   <div class="wrap">
-    <p><a href="#demo1" class="modal"><input type="image" src="./img/copyBtn.png" class="copyBtn" ontouchstart=""/></a></p>
+    <textarea type="text" value="" id="Output" placeholder="変換後の文字列が表示されます" style="font-size:25px" onfocus="this.select();" readonly></textarea>
+    <p>
+    <button id ="cop" ontouchstart=""><a href="#demo1" class="modal"><img src="./img/copyBtn.png" id="copyBtn"></a></button>
+    </p>
+    
     <div class="modalBox" id="demo1">
         <div class="modalInner">
           コピーしました
@@ -47,17 +50,56 @@
     </div>
   </div>
 
+
+
+
+
+<script>
+$(document).ready(function(){
+    $('#copy_btn').on('click', function() {
+        var target = null;
+        var p = null;
+        window.getSelection().removeAllRanges();
+        if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
+            target = document.querySelector('#Output');
+            target.contentEditable  = true;
+            target.readOnly = false;
+        } else {
+            p = document.createElement('p');
+            p.setAttribute('id', 'target')
+            document.body.appendChild(p);
+            p.innerHTML = $('#Output').val();
+            target = document.querySelector('#target');
+        }
+        var range = document.createRange();
+        range.selectNode(target);
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+        if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
+            target.contentEditable  = false;
+            target.readOnly = true;
+        } else {
+            document.body.removeChild(p);
+        }
+        window.getSelection().removeAllRanges();
+    });
+});
+</script>
+
+
+
 <footer class = "footer">
     <a href="https://twitter.com/share" class="twitter-share-button" data-url="【ページのURL】" data-text="文字変換まとめ！【全角半角文字置換etc】">Tweet</a>
     <br> 
-    <div class="line-it-button" style="display: none;" data-lang="ja" data-type="share-b" data-url="file:///C:/Users/share/Desktop/henkann/index.html"></div>
- <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+    <div class="line-it-button" style="display: none;" data-lang="ja" data-type="share-a" data-url="https://tt-sn.github.io/design.io/converter/"></div>
+ <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script
 </footer>
 <!--tweet-->
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
 </script>
+
 
 <!--line-->
   </div>

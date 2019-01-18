@@ -34,7 +34,6 @@ $(document).ready(function(){
       //コピーボタン
       function copyBtn(){
         var Data = $("#Output").val(); //フォームからの入力を受け付ける
-
         $('body').append('<input type="text" id="copyInput" style="height:0" value = "'+Data+'" />');
         $("#copyInput").val(Data);
 
@@ -42,7 +41,8 @@ $(document).ready(function(){
 
         document.execCommand('copy');
         $("#copyInput").remove();
-      }
+        }
+
 
       copyBtn();
 
