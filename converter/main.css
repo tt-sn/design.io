@@ -1,10 +1,10 @@
-body{
+html,body{
+	    overflow: hidden;
 text-align: center;
 margin-left:auto;margin-right:auto;
 }
 
 #webbox{
-    overflow: hidden;
     width: 750px;
     margin-left:auto;margin-right:auto;
 }
