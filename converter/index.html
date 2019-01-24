@@ -2,55 +2,56 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>文字変換まとめ！</title>
-<meta name="viewport" content="width=device-width" initial-scale=1,user-scalable=no" />
+<title>TEXT CONVERTER</title>
+<meta name="viewport" content="width=device-width" >
+<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet"> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="./converter.js"></script>
 <script type="text/javascript" src="./outside.js"></script>
 
 <link rel="stylesheet" type="text/css" href="./main.css">
-<!--ここに広告を挿入-->
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-5406386351451855",
-    enable_page_level_ads: true
-  });
-</script>
+
 </head>
 <body>
   <div id="webbox">
-    <h2>文字変換まとめ</h2>
-
-
-
+    <h2>text converter</h2>
 <hr>
-
+<p>
 <form name="Box_form" action="index.html">
   <textarea type="textbox" name="textbox" id="text" value="" style="font-size:20px" placeholder="変換したい文を貼り付けてください"></textarea>
 </form>
-
+</p>
 <p>
   <div class = "flexbox">
-<div class="flex">
-<input type="image" value="全角→半角"      src="./img/001.png" onclick="convert(this)" class="button" title="1"/>
-<input type="image" value="半角→全角"      src="./img/002.png" onclick="convert(this)" class="button" title="2"/>
-<input type="image" value="かな→カナ"      src="./img/003.png" onclick="convert(this)" class="button" title="3"/>
-<input type="image" value="カナ→かな"      src="./img/004.png" onclick="convert(this)" class="button" title="4"/>
-<input type="image" value="スペース挿入"   src="./img/006.png" onclick="insertSpace()" class="button"/>
-<input type="image" value="スペース削除"   src="./img/007.png" onclick="deleatSpace()" class="button"/>
-<input type="image" value="大文字→小文字"  src="./img/008.png" onclick="toSmall()"     class="button"/>
-<input type="image" value="小文字→大文字"  src="./img/009.png" onclick="toBig()"       class="button"/>
-<input type="image" value="濁点挿入"       src="./img/005.png" onclick="insertMark()"  class="button"/>
-</div>
+  <div class="flex">
+    <input type="image" value="全角→半角"      src="./img/001.png" onclick="convert(this)" class="button" title="1"/>
+    <input type="image" value="半角→全角"      src="./img/002.png" onclick="convert(this)" class="button" title="2"/>
+    <input type="image" value="かな→カナ"      src="./img/003.png" onclick="convert(this)" class="button" title="3"/>
+    <input type="image" value="カナ→かな"      src="./img/004.png" onclick="convert(this)" class="button" title="4"/>
+    <input type="image" value="スペース挿入"   src="./img/006.png" onclick="insertSpace()" class="button"/>
+    <input type="image" value="スペース削除"   src="./img/007.png" onclick="deleatSpace()" class="button"/>
+    <input type="image" value="大文字→小文字"  src="./img/008.png" onclick="toSmall()"     class="button"/>
+    <input type="image" value="小文字→大文字"  src="./img/009.png" onclick="toBig()"       class="button"/>
+    <input type="image" value="濁点挿入"       src="./img/005.png" onclick="insertMark()"  class="button"/>
   </div>
+    <div class = "flex">
+      <div class="block">
+        <p>
+        <textarea type="textbox" id="T1" value="" style="font-size:20px" placeholder="置換前"></textarea><br>
+        <textarea type="textbox" id="T2" value="" style="font-size:20px" placeholder="置換後"></textarea>
+        </p>
+      </div>
+      <input type="image" value="濁点挿入"       src="./img/change.png" onclick="ChangeWord()"  class="button2"/>
+    </div>
+  </div>
+
+
+
 </p>
 <p><img src="./img/vert.png" class="pic" /></p>
 
-
-<!--ここに広告を挿入-->
   <div class="wrap">
-    <textarea type="text" value="" id="Output" placeholder="変換後の文字列が表示されます" style="font-size:25px" onfocus="this.select();" ></textarea>
+    <textarea type="text" value="" id="Output" placeholder="変換後の文字列が表示されます" style="font-size:25px" onfocus="this.select();" readonly></textarea>
     <p>
     <button id ="cop" ontouchstart=""><a href="#demo1" class="modal"><img src="./img/copyBtn.png" id="copyBtn"></a></button>
     </p>
@@ -64,17 +65,21 @@
   <p>※iphoneだとコピーできないみたいです。</p>
 
 <footer class="footer">
-    <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://tt-sn.github.io/design.io/converter/" data-text="文字変換まとめ！【全角半角文字置換etc】">Tweet</a></li> 
+    <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://tt-sn.github.io/design.io/converter/" data-text="TEXT CONVERTER ~ 文字変換のまとめ ~【全角半角文字置換etc】">Tweet</a></li> 
     <li><div class="line-it-button" style="display: none;" data-lang="ja" data-type="share-a" data-url="https://tt-sn.github.io/design.io/converter/"></div></li>
  <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 </footer>
+
+<textarea type="UpdateLog" id="log" readonly>
+  【 更新履歴 】
+  2019/1/24 置換機能の実装
+  2019/1/22 UIの更新：カナ→かな変換時に全角に変換される不具合を修正。
+</textarea>
 <!--tweet-->
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
 </script>
-
-
 <!--line-->
   </div>
 </body>

@@ -85,3 +85,18 @@ $(document).ready(function(){
         });
   });
 });
+
+$(function() {
+  winW = $(window).width();
+    spped = 1000;
+    $('hr').css({
+        left: 0
+    }).animate({
+        left: 0,
+        width: winW
+    }, spped);
+});
+
+$(function(){
+  $('body').hide().fadeIn(1000);
+});

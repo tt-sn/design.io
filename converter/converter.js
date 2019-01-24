@@ -1,4 +1,3 @@
-
 function convert( obj ){
 
     var textData = Box_form.textbox.value; //フォームからの入力を受け付ける
@@ -10,25 +9,28 @@ function convert( obj ){
     //かな→カナ : 3　
     //カナ→かな : 4　一旦全角に変換してから再度変換
 
-    if      (vData == 1){ textData = Half_Width(textData);}
-    else if (vData == 2){ textData = Full_Width(textData);}
+    if      (vData == 1){ textData = Half_Width(textData);
+                          textData = KanaFullHalfconverter(textData , vData); }
+    else if (vData == 2){ textData = Full_Width(textData);
+                          textData = KanaFullHalfconverter(textData , vData);}
     else if (vData == 3){ textData = KanaFullHalfconverter(textData , 3);}
     else if (vData == 4){ textData = Full_Width(textData);
-                          textData = KanaFullHalfconverter(textData , 4);}
+                          textData = KanaFullHalfconverter(textData , 4);
+                          textData = Half_Width(textData);}
 
     document.getElementById("Output").value = textData;
 }
 
 function toBig(){
-let textData = Box_form.textbox.value;
-let afterText = textData.toUpperCase();
-document.getElementById("Output").value = afterText;
+    let textData = Box_form.textbox.value;
+    let afterText = textData.toUpperCase();
+    document.getElementById("Output").value = afterText;
 }
 
 function toSmall(){
-var textData = Box_form.textbox.value;
-var afterText = textData.toLowerCase();
-document.getElementById("Output").value = afterText;
+    var textData = Box_form.textbox.value;
+    var afterText = textData.toLowerCase();
+    document.getElementById("Output").value = afterText;
 }
 
 function insertMark(){
@@ -87,7 +89,6 @@ function Half_Width(text){
     text = text.replace(/[Ａ-Ｚａ-ｚ０-９]/g, (s) => {
     return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
 });
-    text = KanaFullHalfconverter(text , 1);
     return text;
 }
 
@@ -101,7 +102,6 @@ function Full_Width(text){
     text = text.replace(/[A-Za-z0-9]/g, (s) => {
         return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
     });
-    text = KanaFullHalfconverter(text , 2);
     return text;
 }
 
@@ -193,4 +193,17 @@ function KanaFullHalfconverter(beforeText , vData){
         }
     }
     return afterText;
+}
+
+function ChangeWord(){
+    //まずはBOXから変換対象の文字を取得する
+    let targetWord  = document.getElementById("T1").value;
+    let contentWord = document.getElementById("T2").value;
+
+    let beforeText  = Box_form.textbox.value;
+    let afterText   = "";
+
+    afterText =  beforeText.replace(new RegExp(targetWord,'g') , contentWord);
+
+    document.getElementById("Output").value = afterText;
 }
