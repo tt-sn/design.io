@@ -1,6 +1,5 @@
 function cntBtn(){
     var cnt = document.getElementById("contact");
-    alert("this");
     if(cnt.style.display=="block"){
         // noneで非表示
         $('#contact').hide("");
