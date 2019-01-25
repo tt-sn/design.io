@@ -84,6 +84,7 @@ ul{
 }
 #menuBar #under{
   width: 100%;
+  top:-5px;
   height: 30px;
   background: -moz-linear-gradient(top, white, transparent);
   background: -webkit-linear-gradient(top, white, transparent);
