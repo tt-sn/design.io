@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+
+<head>
+    <title>T.S's Portfolio Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=380">
+    <link rel="stylesheet" type="text/css" href="css/Setting.css">
+    <link rel="stylesheet" type="text/css" href="css/photo.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
+    <script src="./js/header.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!--menuの設定-->
+            <div id="menuBar">
+                <div id="top">
+                </div>
+                <div id="medium">
+                    <ul>
+                    <li><button class="button type2">ABOUT</button></li>
+                    <li><button class="button type2"><a href="https://tt-sn.github.io/design.io/portfolio/" target="_blank">STUDY</a></button></li>
+                    <li><button class="button type2">MAKE</button></li>
+                    <li><button class="button type2" onclick="cntBtn()">CONTACT</button>
+                        <div id = "contact">
+                            <p><a href="https://twitter.com/_ttsn_">TWITTER</p>
+                            <p><a href="mailto:rb.totto@gmail.com">MAIL</a></p>
+                        </div>
+                    </li>
+                    <ul>
+                </div>
+                <div id = "under">
+                </div>           
+            </div>
+
+        <div id = "headBlock"></div>
+
+        <div class="panel">
+            <p>Ishikawa</p>
+            <div class="photos">
+                <img src="image/ishikawa1.jpg">
+                <img src="image/ishikawa2.jpg">
+                <img src="image/ishikawa3.jpg">
+                <img src="image/ishikawa4.jpg">
+                <img src="image/ishikawa5.jpg">
+                <img src="image/ishikawa6.jpg">
+            </div>
+        </div>
+
+        <div class="panel">
+                <p>ARASHIYAMA</p>
+                <div class="photos">
+                        <img src="image/arashiyama1.jpg">
+                        <img src="image/arashiyama2.jpg">
+                        <img src="image/arashiyama3.jpg">
+                        <img src="image/arashiyama4.jpg">
+                        <img src="image/arashiyama5.jpg">
+                        <img src="image/arashiyama6.jpg">
+                </div>
+            </div>
+
+        <div class="panel">
+                <p>RURIKŌIN</p>
+                <div class="photos">
+                        <img src="image/ruri1.jpg">
+                        <img src="image/ruri2.jpg">
+                        <img src="image/ruri3.jpg">
+                        <img src="image/ruri4.jpg">
+                        <img src="image/ruri5.jpg">
+                </div>
+            </div>
+
+            <div class="panel">
+                    <p>KIHUNE</p>
+                    <div class="photos">
+                            <img src="image/kibune.JPG">
+                            <img src="image/kibune2.jpg">
+                            <img src="image/kibune3.jpg">
+                            <img src="image/kibune4.jpg">
+                    </div>
+                </div>
+ 
+
+                <div class="panel">
+                    <p>TŌYAMA</p>
+                    <div class="photos">
+                        <img src="image/maccha1.JPG">
+                        <img src="image/yasaka.png">
+                        <img src="image/heian1.jpg">
+                        <img src="image/heian2.jpg">
+                        <img src="image/heian3.jpg">
+                    </div>
+                </div>
+            </div>
+            <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+            <script>
+                window.sr = ScrollReveal({ reset: true, mobile: true });
+                sr.reveal('.panel', { origin: 'left', distance: '60%', duration: 500, scale: 1.0, delay: 100, opacity: 1, });
+
+                sr.reveal('body img', { origin: 'bottom', distance: '0%', duration: 800, scale: 0.5, delay: 200, opacity: 0, });
+            </script>
+</body>
+
+</html>
