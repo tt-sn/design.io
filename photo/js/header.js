@@ -1,5 +1,5 @@
 (window.onload = function() {
-    $('#filter').fadeOut(3000);
+    $('#filter').fadeOut(2000);
 })();
 
 function cntBtn(){
@@ -21,9 +21,8 @@ function cntBtn(){
 
 function stdBtn(){
     $.when(
-        $('#filter').fadeIn(3000),
+        $('#filter').fadeIn(2000),
     ).done(function(){
-        alert("this");
-        document.location.href="//tt-sn.github.io/design.io/portofolio";
+        document.location.href="https://tt-sn.github.io/design.io/portfolio";
     });
   }
