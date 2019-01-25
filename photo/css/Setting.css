@@ -87,7 +87,7 @@ ul{
   height: 30px;
   background: -moz-linear-gradient(top, white, transparent);
   background: -webkit-linear-gradient(top, white, transparent);
-  background: linear-gradient(to top, rgba(255,255,255,0), #fff 0%);
+  background: linear-gradient(to top, rgba(255,255,255,0), #fff 50%);
 }
 
 #contact{
