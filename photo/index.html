@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=380">
     <link rel="stylesheet" type="text/css" href="css/Setting.css">
     <link rel="stylesheet" type="text/css" href="css/photo.css">
+    <!--ﾃﾞﾊﾞｯｸﾞの時は　http:　をつけること-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="js/header.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/earlyaccess/sawarabimincho.css" rel="stylesheet">
+
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
+    <div id = "filter"></div>
     <div class="wrap">
         <!--menuの設定-->
             <div id="menuBar">
@@ -22,7 +24,7 @@
                 <div id="medium">
                     <ul>
                     <li><button class="button type2">ABOUT</button></li>
-                    <li><button class="button type2"><a href="https://tt-sn.github.io/design.io/portfolio/" target="_blank">STUDY</a></button></li>
+                    <li><button class="button type2" onclick="stdBtn()">STUDY</button></li>
                     <li><button class="button type2">MAKE</button></li>
                     <li><button class="button type2" onclick="cntBtn()">CONTACT</button>
                         <div id = "contact">
