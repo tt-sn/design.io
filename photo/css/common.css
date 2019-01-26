@@ -66,14 +66,14 @@ height: 70px;
     display: inline-block;
     vertical-align: top;
     list-style: none;
-    margin: 10px 0;
+    margin: 3px 0;
     width: 25%;
     text-align: center;
   }
   @media (max-width: 800px) {
     #menuBar #medium li{
     font-size: 12px;
-    margin: 5px 0; 
+    margin: 3px 0; 
 
     }
   }
