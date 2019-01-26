@@ -27,7 +27,7 @@ function stdBtn(){
     });
   }
 
-  function stdBtn(){
+  function abtBtn(){
     $.when(
         $('#filter').fadeIn(2000),
     ).done(function(){
