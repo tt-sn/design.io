@@ -26,3 +26,11 @@ function stdBtn(){
         document.location.href="https://tt-sn.github.io/design.io/portfolio";
     });
   }
+
+  function stdBtn(){
+    $.when(
+        $('#filter').fadeIn(2000),
+    ).done(function(){
+        document.location.href="https://tt-sn.github.io/design.io/photo/about.html";
+    });
+  }
