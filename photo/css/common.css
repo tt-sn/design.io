@@ -67,7 +67,7 @@ height: 70px;
   @media (max-width: 800px) {
     #menuBar #medium li{
     font-size: 12px;
-    margin: 10px 0; 
+    margin: 5px 0; 
 
     }
   }
