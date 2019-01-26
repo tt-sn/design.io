@@ -2,6 +2,12 @@
     margin: 0px;
     padding: 0px;
   }
+  
+  a ,a:hover,a:active,a:visited{
+    text-decoration:none;
+    color: black;
+  }
+  
 
 .wrap {
     background: white;
