@@ -60,18 +60,19 @@ height: 70px;
     display: inline-block;
     vertical-align: top;
     list-style: none;
-    margin: 15px 0;
-    width: 20%;
+    margin: 25px 0;
+    width: 25%;
     text-align: center;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     #menuBar #medium li{
-    font-size: 10px;
-    margin: 7px 0; 
+    font-size: 12px;
+    margin: 10px 0; 
+
     }
   }
   
-  @media (max-width: 1000px) {
+  @media (min-width: 801px) {
     #menuBar #medium li{
     font-size: 13px;
     margin: 10px 0; 
@@ -86,7 +87,7 @@ height: 70px;
     background: -webkit-linear-gradient(top, white, transparent);
     background: linear-gradient(to top, rgba(255,255,255,0), #fff 50%);
   }
-  
+
   #contact{
   display: none;
     width: 100%;
