@@ -41,6 +41,24 @@
 height: 70px;
 }
 
+.title{
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    margin: 0 auto;
+    padding: 50px 0;
+    letter-spacing: 5px;
+}
+.title p{
+    text-align: center;
+}
+.title :first-child{
+    font-size:40px;
+}
+.title :last-child{
+    font-size:20px;
+}
+
 #menuBar{
     position: fixed;
     top:0;
@@ -74,7 +92,6 @@ height: 70px;
     #menuBar #medium li{
     font-size: 12px;
     margin: 3px 0; 
-
     }
   }
   
