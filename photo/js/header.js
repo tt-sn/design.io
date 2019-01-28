@@ -28,7 +28,7 @@ function abtBtn(){
 
 function stdBtn(){
     $.when(
-        $('#filter').fadeIn(1500),
+        $('#filter').fadeIn(1000),
     ).done(function(){
         document.location.href="https://tt-sn.github.io/design.io/portfolio";
     });
@@ -36,7 +36,7 @@ function stdBtn(){
 
   function phtBtn(){
     $.when(
-        $('#filter').fadeIn(1500),
+        $('#filter').fadeIn(1000),
     ).done(function(){
         document.location.href="https://tt-sn.github.io/design.io/photo/photo.html";
     });
