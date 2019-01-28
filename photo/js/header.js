@@ -1,5 +1,5 @@
 (window.onload = function() {
-    $('#filter').fadeOut(2000);
+    $('#filter').fadeOut(1500);
 })();
 
 function cntBtn(){
