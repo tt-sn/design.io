@@ -1,10 +1,35 @@
 .index{
-    
-}
-ul{
-    display: flex;
+    padding: 50px 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 
-li{
-    transform: rotate(45deg);
+@media (max-width:800px){
+.index ul{
+    display: block;
+    }
+    
+    .index ul li{
+        margin: 20px 10px 0 20px;
+
+    }
+}
+@media (min-width:801px){
+    .index ul{
+        display: inline-flex;
+        }
+        .index ul li hr{
+            margin-top: 20px;
+        }
+    }
+.index ul li{
+    font-size: 25px;
+    list-style: none;
+    transform: rotate(-45deg);
+}
+
+.index ul li hr{
+    width: 100px;
+    margin: 0 auto;
 }
