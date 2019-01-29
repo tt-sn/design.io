@@ -1,4 +1,5 @@
 .index{
+    font-family: Arial, Helvetica, sans-serif;
     padding: 50px 0;
     width: 100%;
     margin: 0 auto;
@@ -27,9 +28,37 @@
     font-size: 25px;
     list-style: none;
     transform: rotate(-45deg);
+    position: relative;
 }
 
 .index ul li hr{
     width: 100px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+}
+
+#li_1,#li_3{
+    top: -1000px;
+}
+#li_2,#li_4{
+    top: 1000px;
+}
+
+#hr_1,#hr_2,#hr_3{
+    top:1000px;
+    left: -500px;
+}
+
+hr{
+    height: 2px;
+    border: solid 1px;
+}
+
+#border{
+    position: absolute;
+    width: 0px;
+    top: 0px;
+    right: 0px;
+    height: 180px;
+    background-color: black;
+    transform: rotate(0);
 }

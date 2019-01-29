@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=380">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/photo.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/photo.css"> -->
     <!--ﾃﾞﾊﾞｯｸﾞの時は　http:　をつけること-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/first_index.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
 
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -48,73 +49,17 @@
 
         <div class="index">
             <ul>
-                <li>about</li>
-                <li><hr></li>
-                <li>STUDY</li>
-                <li><hr></li>
-                <li>MAKE</li>
-                <li><hr></li>
-                <li>PHOTO</li>
+                <li id="li_1"><button class="button type2" onclick="abtBtn()">ABOUT</button></li>
+                <li id="hr_1"><hr></li>
+                <li id="li_2">STUDY</li>
+                <li id="hr_2"><hr></li>
+                <li id="li_3">MAKE</li>
+                <li id="hr_3"><hr></li>
+                <li id="li_4"><button class="button type2" onclick="phtBtn()">PHOTO</button></li>
+                <li id="border"></li>
             </ul>
         </div>
 
-        <!-- <div class="panel">
-            <p>Ishikawa</p>
-            <div class="photos">
-                <img src="image/ishikawa1.jpg">
-                <img src="image/ishikawa2.jpg">
-                <img src="image/ishikawa3.jpg">
-                <img src="image/ishikawa4.jpg">
-                <img src="image/ishikawa5.jpg">
-                <img src="image/ishikawa6.jpg">
-            </div>
-        </div>
-
-        <div class="panel">
-                <p>ARASHIYAMA</p>
-                <div class="photos">
-                        <img src="image/arashiyama1.jpg">
-                        <img src="image/arashiyama2.jpg">
-                        <img src="image/arashiyama3.jpg">
-                        <img src="image/arashiyama4.jpg">
-                        <img src="image/arashiyama5.jpg">
-                        <img src="image/arashiyama6.jpg">
-                </div>
-            </div>
-
-        <div class="panel">
-                <p>RURIKŌIN</p>
-                <div class="photos">
-                        <img src="image/ruri1.jpg">
-                        <img src="image/ruri2.jpg">
-                        <img src="image/ruri3.jpg">
-                        <img src="image/ruri4.jpg">
-                        <img src="image/ruri5.jpg">
-                </div>
-            </div>
-
-            <div class="panel">
-                    <p>KIHUNE</p>
-                    <div class="photos">
-                            <img src="image/kibune.JPG">
-                            <img src="image/kibune2.jpg">
-                            <img src="image/kibune3.jpg">
-                            <img src="image/kibune4.jpg">
-                    </div>
-                </div>
- 
-
-                <div class="panel">
-                    <p>TŌYAMA</p>
-                    <div class="photos">
-                        <img src="image/maccha1.JPG">
-                        <img src="image/yasaka.png">
-                        <img src="image/heian1.jpg">
-                        <img src="image/heian2.jpg">
-                        <img src="image/heian3.jpg">
-                    </div>
-                </div> -->
-            </div>
             <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
             <script>
                 window.sr = ScrollReveal({ reset: true, mobile: true });
