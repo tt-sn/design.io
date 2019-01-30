@@ -1,7 +1,6 @@
 (window.onload = function () {
     $.when(
         $('#filter').fadeOut(1500),
-        $('.wrap').css({"min-height" : "100vh"}),
     ).done(function () {
         $('#li_1').animate({ 'top': "30px", 'left':'-40px'}, 200, function(){
             $('#li_2').animate({ 'top': '30px','left':'-40px' }, 200,function(){
