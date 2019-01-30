@@ -35,7 +35,7 @@ function hrload(){
 
 function borderMove(){
     var obj = $('#li_1').offset().top;
-    $('#border').offset({'top': obj});
+    $('#border').offset({'top': obj - '200px'});
     $.when(
         $('#headBlock').animate({'top':'0px'}, 200),
     ).done(function(){

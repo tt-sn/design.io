@@ -18,26 +18,24 @@ function cntBtn(){
         $('#contact').show();
 	}
 }
-function abtBtn(){
+
+
+  function pageBtn(val){
     $.when(
-        $('#filter').fadeIn(1500),
+        $('#filter').fadeIn(1000),
     ).done(function(){
+        if(val == 1){
         document.location.href="https://tt-sn.github.io/design.io/photo/about.html";
+        }
+        else if(val == 2){
+            document.location.href="https://tt-sn.github.io/design.io/portfolio";
+        }
+        else if(val == 3){
+            document.location.href="https://tt-sn.github.io/design.io/photo/make.html";
+        }
+        else if(val == 4){
+            document.location.href="https://tt-sn.github.io/design.io/photo/photo.html";
+        }
     });
-  }
 
-function stdBtn(){
-    $.when(
-        $('#filter').fadeIn(1000),
-    ).done(function(){
-        document.location.href="https://tt-sn.github.io/design.io/portfolio";
-    });
-  }
-
-  function phtBtn(){
-    $.when(
-        $('#filter').fadeIn(1000),
-    ).done(function(){
-        document.location.href="https://tt-sn.github.io/design.io/photo/photo.html";
-    });
   }

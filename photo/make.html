@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+
+<head>
+    <title>T.S's Portfolio Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=380">
+    <link rel="stylesheet" type="text/css" href="css/make.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!--ﾃﾞﾊﾞｯｸﾞの時は　http:　をつけること-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500|Major+Mono+Display" rel="stylesheet">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <div id="filter"></div>
+    <div class="wrap">
+        <!--menuの設定-->
+        <div id="menuBar">
+            <div id="top">
+            </div>
+            <div id="medium">
+                <ul>
+                        <li><button class="button type2" onclick="pageBtn(id)" id="1">ABOUT</button></li>
+                        <li><button class="button type2" onclick="pageBtn(id)" id="2">STUDY</button></li>
+                        <li><button class="button type2" onclick="pageBtn(id)" id="3">MAKE</button></li>
+                        <li><button class="button type2" onclick="pageBtn(id)" id="4">PHOTO</button></li>
+                    <li><button class="button type2" onclick="cntBtn()">CONTACT</button>
+                        <div id="contact">
+                            <p><a href="https://twitter.com/_ttsn_">TWITTER</a></p>
+                            <p><a href="mailto:rb.totto@gmail.com">MAIL</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="under">
+            </div>
+        </div>
+
+        <div id="headBlock"></div>
+        <div class="title">
+                <p>MAKE</p>
+                <p>-作品集-</p>
+        </div>
+        <div class="inline">
+            <div class="panel">
+                <!-- 画像 -->
+                <div class="photo">
+                    <button class="iconButton"><img src="./image/texconv.png" /></button>
+                </div>
+                <!-- タイトル -->
+                <p>【TEXT CONVERTER】</p>
+                <!-- 説明文 -->
+                <p>iOS端末で半角入力ができないのが不便だなと感じ制作したwebアプリです。
+                    半角へ変換などの文字列演算のまとめのページになります。
+                    このアプリを制作するにあたって、初めて本格的にJavaScriptを勉強しました。
+                    特に正規表現についての知識が身に付きました。
+                </p>  
+            </div>
+            <div class="panel">
+                <!-- 画像 -->
+                <div class="photo">
+                    <button class="iconButton"><img src="./image/MCicon.png" /></button>
+                </div>
+                <!-- タイトル -->
+                <p>【記憶電卓】</p>
+                <!-- 説明文 -->
+                <p>UnityのuGUI機能の勉強を兼ねて制作したAndroid向けアプリです。
+                    使用言語はC#(Unity)です。
+                    このアプリを制作するにあたって、画面設計(UI)を主に意識しました。
+                    初めてのAndroid向けアプリ制作で、どのような過程でアプリを作っていくのか勉強になりました。
+                    また、クラス設計の重要性を身をもって感じました。
+                </p>  
+            </div>
+            <div class="panel">
+                <!-- 画像 -->
+                <div class="photo">
+                    <button class="iconButton"><img src="./image/MCicon.png" /></button>
+                </div>
+                <!-- タイトル -->
+                <p>【僕と妖精の森】</p>
+                <!-- 説明文 -->
+                <p>UnityのuGUI機能の勉強を兼ねて制作したAndroid向けアプリです。
+                    使用言語はC#(Unity)です。
+                    このアプリを制作するにあたって、画面設計(UI)を主に意識しました。
+                    初めてのAndroid向けアプリ制作で、どのような過程でアプリを作っていくのか勉強になりました。
+                    また、クラス設計の重要性を身をもって感じました。
+                </p>  
+            </div>
+        </div>
+
+        <div class="inline">
+
+
+        </div>
+
+
+        </div>
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+        <script>
+            window.sr = ScrollReveal({ reset: true, mobile: true });
+            sr.reveal('.panel', { origin: 'left', distance: '60%', duration: 500, scale: 1.0, delay: 100, opacity: 1, });
+
+            // sr.reveal('body img', { origin: 'bottom', distance: '0%', duration: 800, scale: 0.5, delay: 200, opacity: 0, });
+        </script>
+</body>
+
+</html>
