@@ -37,12 +37,24 @@
   }
 @media (max-width:800px){
   #headBlock{
-  height: 70px;
+  height: 50px;
   }
+  .title :first-child{
+    font-size:20px;
+}
+.title :last-child{
+    font-size:12px;
+}
 }
 @media (min-width:800px){
   #headBlock{
   height: 100px;
+  }
+  .title :first-child{
+    font-size:30px;
+  }
+  .title :last-child{
+    font-size:15px;
   }
 }
 .title{
@@ -55,12 +67,6 @@
 }
 .title p{
     text-align: center;
-}
-.title :first-child{
-    font-size:30px;
-}
-.title :last-child{
-    font-size:15px;
 }
 
 #menuBar{
