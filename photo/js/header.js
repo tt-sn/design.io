@@ -36,6 +36,13 @@ function cntBtn(){
         else if(val == 4){
             document.location.href="https://tt-sn.github.io/design.io/photo/photo.html";
         }
+
+        else if(val == "MC"){
+            document.location.href="https://play.google.com/store/apps/details?id=com.ttsn.MemoryCalculator&hl=ja"
+        }
+        else if(val == "cnv"){
+            document.location.href="https://tt-sn.github.io/design.io/converter/"
+        }
     });
 
   }
