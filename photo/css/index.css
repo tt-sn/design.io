@@ -68,11 +68,12 @@ hr{
   }
 
 #border{
-    position: relative;
+    position: absolute;
     width: 0px;
     top: 0px;
     right: 0px;
-    height: 100vh;
+    height: 100%;
     background-color: black;
     transform: rotate(0);
+    overflow: hidden;
 }
