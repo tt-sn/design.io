@@ -13,8 +13,7 @@
     width:100%;
     margin: 5px 5px;
     overflow: hidden;
-    height: 100vh;
-    
+    min-height: 1000px;
   }
   
   body {
