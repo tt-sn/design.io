@@ -25,16 +25,16 @@ function cntBtn(){
         $('#filter').fadeIn(1000),
     ).done(function(){
         if(val == 1){
-        document.location.href="https://tt-sn.github.io/design.io/photo/about.html";
+        document.location.href="https://tt-sn.github.io/design.io/portfolio/about.html";
         }
         else if(val == 2){
-            document.location.href="https://tt-sn.github.io/design.io/photo/study.html";
+            document.location.href="https://tt-sn.github.io/design.io/portfolio/study.html";
         }
         else if(val == 3){
-            document.location.href="https://tt-sn.github.io/design.io/photo/make.html";
+            document.location.href="https://tt-sn.github.io/design.io/portfolio/make.html";
         }
         else if(val == 4){
-            document.location.href="https://tt-sn.github.io/design.io/photo/photo.html";
+            document.location.href="https://tt-sn.github.io/design.io/portfolio/photo.html";
         }
 
         else if(val == "11"){
