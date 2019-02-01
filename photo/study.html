@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html class="no-js">
+
+<head>
+    <title>T.S's Portfolio Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=380">
+    <link rel="stylesheet" type="text/css" href="css/study.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <!--ﾃﾞﾊﾞｯｸﾞの時は　http:　をつけること-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/study.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500|Major+Mono+Display" rel="stylesheet">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <div id="filter"></div>
+
+    <div class="wrap">
+
+        <!--menuの設定-->
+        <div id="menuBar">
+            <div id="top">
+            </div>
+            <div id="medium">
+                <ul>
+                    <li><button class="button type2" onclick="pageBtn(id)" id="1">ABOUT</button></li>
+                    <li><button class="button type2" onclick="pageBtn(id)" id="2">STUDY</button></li>
+                    <li><button class="button type2" onclick="pageBtn(id)" id="3">MAKE</button></li>
+                    <li><button class="button type2" onclick="pageBtn(id)" id="4">PHOTO</button></li>
+                    <li><button class="button type2" onclick="cntBtn()">CONTACT</button>
+                        <div id="contact">
+                            <p><a href="https://twitter.com/_ttsn_">TWITTER</a></p>
+                            <p><a href="mailto:rb.totto@gmail.com">MAIL</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="under">
+            </div>
+        </div>
+
+        <!-- ポップアップウィンドウの中身 -->
+        <div id="detail" onclick="detailOff()">
+            <div id="popupPanel">
+                <div id="p1">
+                    <img src = "./image/unity.png" />
+                    <img src = "./image/kinect.jpg" />
+                    <p>
+                            　コンピュータグラフィックスにおいて，自然現象のシミュレーションやアルゴリズムの改良に関する研究は盛んに行われていいます．これらの研究の多くは,より正確な計算結果を求めたり,より高速な処理を可能にし，災害の対策などに貢献しています．一方，3DCGはゲームやアニメなどのエンターテイメントの分野にも非常によく使用され，近年では特にステージ演出やVR・ARなどのコンテンツでも利用されています．VFXなどの近年になってから一般的になり始めた技術の中の演出手法は，演出の製作者の個人による独自の手法が多いため，現状では一般化されていないことが多いです．このことから,VFX用いたステージ演出やゲームでの利用に期待できるビジュアルエフェクトを対話的な速度で生成する手法を提案することは有用であると考えられ，この研究を行っています．
+                    </p>
+                    <p><hr>キーワード：Unity，shader，Kinect</p>
+                </div>
+                <div id="p2">
+                    <img src = "./image/metaball.gif" />
+                    <p>
+                        　メタボール (Metaball) という水のような多次元有機的モデルの滑らかな曲面を再現する手法を用いて水の曲面の形状を生成しています. この手法は，正確な形状は生成できませんが軽量であるため,多くの粒子を用いた流体のシミュレーションや，人体などの曲線が主なモデリングなどに使われています.<br>
+                        　3次元空間上のある点に置かれたモデルに，中心点から距離に比例して値が小さくなる密度分布を与えます。密度分布を持った複数のモデルを互いに近づけ，それぞれの持っている密度場を足し合わせた密度場が閾値と等しくなる位置に合わせてモデルの形の表面を描画することにより，滑らかな曲線で繋がったモデルを得ることができます.
+                    </p>
+                    <p><hr>キーワード：metaball</p>
+                </div>
+                <div id="p3">
+                    <img src = "./image/refanim.gif" />
+                    <p>
+                        　水の形状を生成した後，表面の形状のメッシュを生成します．水の動きを動的に再現するため，メッシュの生成は高速に行う必要があります.そのため，3次元空間を分割し,格子内のスカラーデータで構成されるボクセルデータの等値面を近似し，ポリゴンデータに変換し，メッシュを生成するマーチングキューブ法を用いました.<br>
+                        　3次元空間を分割している各格子点が持っているスカラ値と等値面のスカラ値を比較し，スカラ値の大小を求め大きいほうを1，小さいほうを0とします．辺の両端の格子点にそれぞれ0と1が与えられているとき，その辺に等値面を通過させます．辺の両端が共に0もしくは1のとき，等値面は通過させません．この等値面を通過させた点をつなぎ3角形メッシュの生成を行います．3角形メッシュの生成パターンは8つの各頂点が0もしくは1なので 2^8 = 256 通りですが,回転を行った際に同形であるものを除き，また表裏を問わない場合は 15通りになります.この15通りの3角形メッシュで高速にモデルのメッシュを生成します.
+                    </p>
+                    <p><hr>キーワード：マーチングキューブ法，軽量化</p>
+                </div>
+                <div id="p4">
+                    <img src = "./image/refanim.gif" />
+                    <p>
+                        <!-- 　モデルを水らしく見せるためには色(透明度)が重要な要素になります．水の光の屈折を用いることにより，一層「水らしさ」を持つモデルの生成を生成します．<br> -->
+                        　水による光の屈折を表現するため，投影マッピング(プロジェクションマッピング)をUnity Shaderを用いて実装しました.視点からのベクトルが生成した水を通り，背面にあるオブジェクトの到達した場所の画素を取得し，取得した画素をテクスチャとすることで背面オブジェクトの色を持った水を生成します.<br>
+                        　投影マッピングで取得したテクスチャを水に適用する際に，テクスチャを水の形状に合わせて変形させることにより水による光の屈折を表現します．視線ベクトルと正規化した水の頂点(面)の法線ベクトルの内積を求め，視線ベクトルと面が直交していれば内積は 1 を返し，平行であれば 0 を返すので，1 から内積の絶対値を引いた値を求めます．求めた値に白色フィルタを足し合わせて透明度を決定します．視線と面のなす角度が大きいほど不透明になり，陰影ができ水の輪郭が強調されます.また,テクスチャに水の面の法線ベクトルで補正し，歪ませることで疑似的に水のゆがみを再現しました.
+                    </p>
+                    <p><hr>キーワード：屈折マッピング，投影マッピング</p>
+                </div>
+                <div id="p5">
+                    <img src = "./image/body.gif" />
+                    <p>
+                        　現在は上部の画像のように，流体をリアルタイムで生成することまで実装済みです．しかし，やはり動作が重く滑らかに動かすためにはハイスペックな機材が必要となっています．<br>
+                        　現在行っている点としては，レイマーチングと呼ばれるレンダリング手法を用いて軽量化を図っています．また，水以外への見た目へと変化可能なようにshaderを操作しています．
+                        　表現は主に水での利用を想定していますが，流体であるためその他の流体（炎や砂塵など）へも応用が可能となっています．
+
+                    </p>
+                    <p><hr>キーワード：レイマーチング，流体</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="headBlock"></div>
+
+        <div class="title">
+                <p>STUDY</p>
+                <p>-研究-</p>
+        </div>
+        <div class="inline">
+            <div class="panel">
+                <!-- 画像 -->
+                <div class="photo">
+                    <button class="iconButton" onclick="detailOn(id)" id="p1"><img src="./image/texconv.png" /></button>
+                </div>
+                <!-- タイトル -->
+                <p>研究について</p>
+            </div>
+            <div class="panel">
+                <!-- 画像 -->
+                <div class="photo">
+                    <button class="iconButton" onclick="detailOn(id)" id="p2"><img src="./image/meta.png" /></button>
+                </div>
+                <!-- タイトル -->
+                <p>曲面形状の生成</p>
+            </div>
+            <div class="panel">
+                <!-- 画像 -->
+                <div class="photo">
+                    <button class="iconButton" onclick="detailOn(id)" id="p3"><img src="./image/mc3d.png" /></button>
+                </div>
+                <!-- タイトル -->
+                <p>軽量化手法</p>
+            </div>
+            <div class="panel">
+                <!-- 画像 -->
+                <div class="photo">
+                    <button class="iconButton" onclick="detailOn(id)" id="p4"><img src="./image/water.jpg" /></button>
+                </div>
+                <!-- タイトル -->
+                <p>見た目の表現</p>
+            </div>
+            <div class="panel">
+                <!-- 画像 -->
+                <div class="photo">
+                    <button class="iconButton" onclick="detailOn(id)" id="p5"><img src="./image/HandWat.png" /></button>
+                </div>
+                <!-- タイトル -->
+                <p>実装状況</p>
+                </div>
+        </div>
+
+        <div class="inline">
+        <!-- デザイン類の作品詳細 -->
+
+        </div>
+
+        </div>
+        <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+        <script>
+            window.sr = ScrollReveal({ reset: true, mobile: true });
+            sr.reveal('.panel', { origin: 'bottom', distance: '60%', duration: 500, scale: 1.0, delay: 100, opacity: 1, });
+
+            // sr.reveal('body img', { origin: 'bottom', distance: '0%', duration: 800, scale: 0.5, delay: 200, opacity: 0, });
+        </script> -->
+</body>
+</html>
