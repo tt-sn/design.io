@@ -1,5 +1,5 @@
 (window.onload = function() {
-    $('#filter').fadeOut(1500);
+    $('#filter').fadeOut(1000);
 })();
 
 function cntBtn(){
@@ -28,7 +28,7 @@ function cntBtn(){
         document.location.href="https://tt-sn.github.io/design.io/photo/about.html";
         }
         else if(val == 2){
-            document.location.href="https://tt-sn.github.io/design.io/portfolio";
+            document.location.href="https://tt-sn.github.io/design.io/photo/study.html";
         }
         else if(val == 3){
             document.location.href="https://tt-sn.github.io/design.io/photo/make.html";
