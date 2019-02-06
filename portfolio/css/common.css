@@ -34,7 +34,18 @@
     z-index: 50;
     overflow: hidden;
   }
-@media (max-width:800px){
+@media (max-width:600px){
+  #headBlock{
+  height: 40px;
+  }
+  .title :first-child{
+    font-size:20px;
+}
+.title :last-child{
+    font-size:12px;
+}
+}
+@media (max-width:900px){
   #headBlock{
   height: 50px;
   }
@@ -45,7 +56,7 @@
     font-size:12px;
 }
 }
-@media (min-width:800px){
+@media (min-width:901px){
   #headBlock{
   height: 100px;
   }

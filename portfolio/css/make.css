@@ -12,16 +12,27 @@
     border: solid 1px black;
     text-align: center;
   }
-  /* @media (max-width:800px){
+  @media (max-width:900px){
+    .panel{
+        max-width: 300px;
+    }
     .panel p{
         padding: 10px 5%;
       }
   }
-  @media (min-width:801px){
+  @media (max-width:600px){
+    .panel{
+        width: 95%;
+    }
+    .panel p{
+        padding: 8px 1%;
+      }
+  }
+  @media (min-width:901px){
     .panel p{
         padding: 20px 10%;
       }
-  } */
+  }
 
   .panel p{
     padding: 20px 5%;

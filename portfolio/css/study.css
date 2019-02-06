@@ -44,7 +44,24 @@
         max-width: 100%;
     }
 
-@media (max-width:800px){
+@media (max-width:900px){
+    .panel{
+        width:30%;
+        min-width: 10px;
+        }
+        .panel p{
+            font-size: 10px;
+        }
+        #detail #popupPanel img{
+        max-width: 90%;
+    }
+    #detail #popupPanel{
+        word-spacing: 2px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width:600px){
     .panel{
         width:40%;
         min-width: 100px;
@@ -60,7 +77,8 @@
         font-size: 12px;
     }
 }
-@media (min-width:801px){
+
+@media (min-width:901px){
     .panel{
         width:80%;
     }
