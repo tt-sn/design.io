@@ -88,7 +88,7 @@ function make(id){
     hgt = Math.abs( Math.random() ) * hgt; 
     time = Math.abs( Math.random()*(25-5)+5 ) * 100;
 
-    size = Math.abs( Math.random()*(150-10)+10 ) + "px";
+    size = Math.abs( Math.random()*(50-10)+10 ) + "px";
 
     $(id).css({'left': wid ,'top':hgt});
     $(id).css({'width': size ,'height': size});
