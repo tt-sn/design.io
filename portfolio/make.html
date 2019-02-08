@@ -10,6 +10,7 @@
     <!--ﾃﾞﾊﾞｯｸﾞの時は　http:　をつけること-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/bganimation.js"></script>
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:500|Major+Mono+Display" rel="stylesheet">
 
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -17,6 +18,13 @@
 
 <body>
     <div id="filter"></div>
+    <div id="anim">
+        <li id="li_01"></li>
+        <li id="li_02"></li>
+        <li id="li_03"></li>        
+        <li id="li_04"></li>
+        <li id="li_05"></li>
+    </div>
     <div class="wrap">
         <!--menuの設定-->
         <div id="menuBar">
@@ -116,12 +124,5 @@
         </div>
 
         </div>
-        <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-        <script>
-            window.sr = ScrollReveal({ reset: true, mobile: true });
-            sr.reveal('.panel', { origin: 'bottom', distance: '60%', duration: 500, scale: 1.0, delay: 100, opacity: 1, });
-
-            // sr.reveal('body img', { origin: 'bottom', distance: '0%', duration: 800, scale: 0.5, delay: 200, opacity: 0, });
-        </script> -->
 </body>
 </html>

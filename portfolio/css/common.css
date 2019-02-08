@@ -173,3 +173,18 @@
   .button.type2.type2:hover:after {
     transform: scale(1.2);
   }
+
+  #anim{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+#anim >*{
+    display: none;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
