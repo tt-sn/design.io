@@ -53,3 +53,20 @@
   column-count:         2;
   }
 }
+
+
+.panel{
+  margin: 20px auto;
+  height: auto;
+  width:100%;
+  max-width: 1000px;
+  z-index: 5;
+  background-color: silver;
+  color: black;
+  border-radius: 5px;
+}
+
+.panel p{
+  padding: 20px 10%;
+  font-size: 40px;
+}

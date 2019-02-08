@@ -51,7 +51,7 @@ function cntBtn(){
 
 
  function check(){
-    if($('#li_01').css('display') == "none" ){
+    if($('#li_01').css('display') == "none"  ){
         //作成するやつ呼び出し
         make("#li_01");
     }
@@ -100,6 +100,10 @@ function make(id){
 }
 
 //fadeinで呼び出されるfadeout関数
-function out(name){
-    $(name).fadeOut(500);
+function out(id){
+    $.when(
+    $(id).fadeOut(500)
+    ).done(function(){
+        $(id).css('display','none');
+    })
 }

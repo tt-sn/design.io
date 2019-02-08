@@ -9,6 +9,10 @@ img{
     width: 100%;
 }
 
+.panel{
+    background-color: white;
+}
+
 .panel p{
     text-align: left;
     word-wrap: break-word;

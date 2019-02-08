@@ -183,8 +183,9 @@
 }
 
 #anim >*{
+    z-index: -1;
     display: none;
-    position: relative;
+    position: absolute;
     width: 100px;
     height: 100px;
     background-color: black;
