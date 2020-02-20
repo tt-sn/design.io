@@ -63,20 +63,25 @@
                     <p><hr>キーワード：Unity，shader，Kinect</p>
                 </div>
                 <div id="p2">
-                    <img src = "./image/metaball.gif" />
+                    <img src = "./image/PS.gif" />
                     <p>
-                        　メタボール (Metaball) という水のような多次元有機的モデルの滑らかな曲面を再現する手法を用いて水の曲面の形状を生成しています. この手法は，正確な形状は生成できませんが軽量であるため,多くの粒子を用いた流体のシミュレーションや，人体などの曲線が主なモデリングなどに使われています.<br>
-                        　3次元空間上のある点に置かれたモデルに，中心点から距離に比例して値が小さくなる密度分布を与えます。密度分布を持った複数のモデルを互いに近づけ，それぞれの持っている密度場を足し合わせた密度場が閾値と等しくなる位置に合わせてモデルの形の表面を描画することにより，滑らかな曲線で繋がったモデルを得ることができます.
+                        OpenGLに搭載されている機能のPoint SpriteをUnity上で実装．4つの頂点からなる2次元平面のMeshで球を描画するため，処理コストが低い．
+                        Camera Space上でVertical Billboardを生成し，平面上に仮想のz座標を算出，陰影付けを行う．
+                        
                     </p>
-                    <p><hr>キーワード：metaball</p>
+                    <p><hr>キーワード：Point Sprite</p>
                 </div>
                 <div id="p3">
-                    <img src = "./image/MC2d.gif" />
+                    <img src = "./image/DB.gif" />
                     <p>
-                        　水の形状を生成した後，表面の形状のメッシュを生成します．水の動きを動的に再現するため，メッシュの生成は高速に行う必要があります.そのため，3次元空間を分割し,格子内のスカラーデータで構成されるボクセルデータの等値面を近似し，ポリゴンデータに変換し，メッシュを生成するマーチングキューブ法(MC法)を用いました.<br>
-                        　3次元空間を分割している各格子点が持っているスカラ値と等値面のスカラ値を比較し，スカラ値の大小でどのように近似するかを決めます．MC法をGPUで処理させることにより、描画処理の大幅なコスト削減を行います．
+                        粒子の陰影付けにDisney BRDFを採用した．物理ベースに近い陰影付けモデルであり，構成しているパラメータの数が少ない．
+                        処理コストは少し重いが開発環境では問題なく動作した．動作させる環境次第では，より軽量な陰影付けモデルの方が良いかもしれない．<br>
+
+                        <a href="http://project-asura.com/blog/archives/2175#more-2175" target="_blank">参考にさせて頂いたサイト</a><br>
+                        <a href="https://disney-animation.s3.amazonaws.com/library/s2012_pbs_disney_brdf_notes_v2.pdf" target="_blank"> Disney “principled” BRDF</a>
+
                     </p>
-                    <p><hr>キーワード：マーチングキューブ法，軽量化</p>
+                    <p><hr>キーワード：Disney　BRDF</p>
                 </div>
                 <div id="p4">
                     <img src = "./image/refanim.gif" />
@@ -121,7 +126,7 @@
                     <button class="iconButton" onclick="detailOn(id)" id="p2"><img src="./image/meta.png" /></button>
                 </div>
                 <!-- タイトル -->
-                <p>曲面形状の生成</p>
+                <p>粒子の描画</p>
             </div>
             <div class="panel">
                 <!-- 画像 -->
@@ -129,7 +134,7 @@
                     <button class="iconButton" onclick="detailOn(id)" id="p3"><img src="./image/mc3d.png" /></button>
                 </div>
                 <!-- タイトル -->
-                <p>軽量化手法</p>
+                <p>陰影付け</p>
             </div>
             <div class="panel">
                 <!-- 画像 -->
@@ -155,12 +160,12 @@
         </div>
 
         </div>
-        <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
         <script>
             window.sr = ScrollReveal({ reset: true, mobile: true });
-            sr.reveal('.panel', { origin: 'bottom', distance: '60%', duration: 500, scale: 1.0, delay: 100, opacity: 1, });
+            sr.reveal('.panel', { origin: 'left', distance: '60%', duration: 500, scale: 1.0, delay: 100, opacity: 1, });
 
-            // sr.reveal('body img', { origin: 'bottom', distance: '0%', duration: 800, scale: 0.5, delay: 200, opacity: 0, });
-        </script> -->
+            sr.reveal('body img', { origin: 'bottom', distance: '0%', duration: 800, scale: 0.5, delay: 200, opacity: 0, });
+        </script>
 </body>
 </html>
