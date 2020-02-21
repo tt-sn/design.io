@@ -124,6 +124,7 @@ function writeHeader(rootDir){
 
 }
 
+//ヘッダーの書き込み設定
 function writeHeader(rootDir){
  
 	$.ajax({
