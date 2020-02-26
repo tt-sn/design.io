@@ -24,12 +24,12 @@
 
   .inline{
       width: 90%;
-      max-width: 500px;
+      max-width: 800px;
       margin: 0 auto;
-      /* margin-left: 5%; */
       display: inline-flex;
       flex-wrap: wrap;
       background-color: white;
+      text-align: center;
   }
 
 .photo{
