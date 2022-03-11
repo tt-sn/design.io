@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="../lib/jquery-1.8.0.custom.js"></script>
+<title>End of book</title>
+</head>
+<body>
+	<div id="paramField">
+		<div id='testString'>巻末iframeテスト</div>
+	</div>
+	<div id="closeViewer"><button>ビューワを閉じる</button></div>
+	<script>
+		var query = location.search.substring(1);
+
+		if (query !== '') {
+			var params = query.split( '&' );
+			var element;
+			var text;
+		    for (i = 0; i < params.length; i++) {
+				elem = params[ i ].split( '=' );
+				var paramName = decodeURIComponent(elem[0]);
+				var paramValue = decodeURIComponent(elem[1]);
+
+				text = paramName + '：' + paramValue;
+				element = $('<div><div>').attr('id' ,paramName).text(text);
+				$('#paramField').append(element);
+			}
+		}
+		$('#closeViewer button').bind('touchstart click', function() {
+		    parent.window.postMessage({action : 'closeViewer'}, '*');
+		    return true;
+		})
+	</script>
+</body>
+</html>
