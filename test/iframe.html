@@ -30,7 +30,7 @@
 			}
 		}
 		$('#closeViewer button').bind('touchstart click', function() {
-		    parent.window.postMessage({action : 'closeViewer'}, 'https://tama.tok.access-company.com');
+		    window.parent.postMessage({action : 'closeViewer'}, 'https://tama.tok.access-company.com');
 		    return true;
 		})
 	</script>
