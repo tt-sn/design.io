@@ -12,27 +12,23 @@
 		<div id='testString'>巻末iframeテスト</div>
 	</div>
 	<div id="closeViewer"><button>(iframe)ビューワを閉じる</button></div>
-	<script>
-		var query = location.search.substring(1);
 
-		if (query !== '') {
-			var params = query.split( '&' );
-			var element;
-			var text;
-		    for (i = 0; i < params.length; i++) {
-				elem = params[ i ].split( '=' );
-				var paramName = decodeURIComponent(elem[0]);
-				var paramValue = decodeURIComponent(elem[1]);
-
-				text = paramName + '：' + paramValue;
-				element = $('<div><div>').attr('id' ,paramName).text(text);
-				$('#paramField').append(element);
-			}
-		}
-		$('#closeViewer button').bind('touchstart click', function() {
-		    window.parent.postMessage({action : 'closeViewer'}, 'https://tama.tok.access-company.com');
-		    return true;
-		})
-	</script>
+<a href="#" id="closeViewer">ビューワーを閉じる</a>
+<script type="text/javascript">
+    var handleEvent = function () {
+      try {
+        document.referrer.postMessage({action: 'closeViewer'}, '*');
+      } catch (e) {
+      }
+      try {
+        parent.window.postMessage({action: 'closeViewer'}, '*');
+      } catch (e) {
+      }
+      return false;
+    };
+    var closeViewerButton = document.getElementById('closeViewer');
+    closeViewerButton.addEventListener('touchstart', handleEvent);
+    closeViewerButton.addEventListener('click', handleEvent);
+</script>
 </body>
 </html>
