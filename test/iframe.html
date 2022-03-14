@@ -15,13 +15,14 @@
 
 <a href="#" id="closeViewer">ビューワーを閉じる</a>
 <script type="text/javascript">
+//window.parent.postMessage({action : 'closeViewer'}, 'https://tama.tok.access-company.com');
     var handleEvent = function () {
       try {
-        document.referrer.postMessage({action: 'closeViewer'}, '*');
+        document.referrer.postMessage({action: 'closeViewer'}, 'https://tama.tok.access-company.com');
       } catch (e) {
       }
       try {
-        parent.window.postMessage({action: 'closeViewer'}, '*');
+        parent.window.postMessage({action: 'closeViewer'}, 'https://tama.tok.access-company.com');
       } catch (e) {
       }
       return false;
