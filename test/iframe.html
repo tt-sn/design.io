@@ -18,11 +18,11 @@
 //window.parent.postMessage({action : 'closeViewer'}, 'https://tama.tok.access-company.com');
     var handleEvent = function () {
       try {
-        document.referrer.postMessage({action: 'closeViewer'}, 'https://tama.tok.access-company.com');
+        document.referrer.postMessage({action: 'closeViewer'}, '*');
       } catch (e) {
       }
       try {
-        parent.window.postMessage({action: 'closeViewer'}, 'https://tama.tok.access-company.com');
+        parent.window.postMessage({action: 'closeViewer'}, '*');
       } catch (e) {
       }
       return false;
