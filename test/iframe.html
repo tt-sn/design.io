@@ -12,7 +12,8 @@
 		<div id='testString'>巻末iframeテスト(CORS)</div>
 	</div>
 
-<a href="#" id="closeViewer">ビューワーを閉じる</a>
+<a href="#" id="closeViewerHref">ビューワーを閉じる(href)</a>
+<div id="closeViewerButton"><button>ビューワを閉じる(button)</button></div>
 <script type="text/javascript">
 //window.parent.postMessage({action : 'closeViewer'}, 'https://tama.tok.access-company.com');
     var handleEvent = function () {
@@ -26,9 +27,12 @@
       }
       return false;
     };
-    var closeViewerButton = document.getElementById('closeViewer');
+    var closeViewerButton = document.getElementById('closeViewerButton');
     closeViewerButton.addEventListener('touchstart', handleEvent);
     closeViewerButton.addEventListener('click', handleEvent);
+    var closeViewerHref = document.getElementById('closeViewerHref');
+    closeViewerHref.addEventListener('touchstart', handleEvent);
+    closeViewerHref.addEventListener('click', handleEvent);
 </script>
 </body>
 </html>
