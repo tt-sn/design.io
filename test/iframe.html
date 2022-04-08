@@ -17,6 +17,7 @@
 	<a href="" id="closeViewerHref">ビューワーを閉じる(href)</a>
 	<div id="closeViewerDivSharp"><a href="#">ビューワを閉じる(div#)</a></div>
 	<div id="closeViewerDiv"><a href="">ビューワを閉じる(div)</a></div>
+	<div id="closeViewerDivId"><a href="#closeViewerDivId">ビューワを閉じる(divID)</a></div>
 <script type="text/javascript">
     var handleEvent = function () {
       try {
@@ -44,6 +45,9 @@
 	var closeViewerDivSharp = document.getElementById('closeViewerDivSharp');
     closeViewerDivSharp.addEventListener('touchstart', handleEvent);
     closeViewerDivSharp.addEventListener('click', handleEvent);
+	var closeViewerDivId = document.getElementById('closeViewerDivId');
+    closeViewerDivId.addEventListener('touchstart', handleEvent);
+    closeViewerDivId.addEventListener('click', handleEvent);
 </script>
 </body>
 </html>
