@@ -13,7 +13,8 @@
 	</div>
 
 <a href="#" id="closeViewerHref">ビューワーを閉じる(href)</a>
-<div id="closeViewerButton"><button>ビューワを閉じる(button)</button></div>
+<button id="closeViewerButton">ビューワを閉じる(button)</button>
+<div id="closeViewerDiv"><a href="">ビューワを閉じる(div)</a></div>
 <script type="text/javascript">
 //window.parent.postMessage({action : 'closeViewer'}, 'https://tama.tok.access-company.com');
     var handleEvent = function () {
@@ -31,6 +32,9 @@
     closeViewerButton.addEventListener('touchstart', handleEvent);
     closeViewerButton.addEventListener('click', handleEvent);
     var closeViewerHref = document.getElementById('closeViewerHref');
+    closeViewerHref.addEventListener('touchstart', handleEvent);
+    closeViewerHref.addEventListener('click', handleEvent);
+    var closeViewerDiv = document.getElementById('closeViewerDiv');
     closeViewerHref.addEventListener('touchstart', handleEvent);
     closeViewerHref.addEventListener('click', handleEvent);
 </script>
