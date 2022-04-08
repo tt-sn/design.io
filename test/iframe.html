@@ -12,14 +12,15 @@
 		<div id='testString'>巻末iframeテスト(CORS)</div>
 	</div>
 
-<a href="" id="closeViewerHref">ビューワーを閉じる(href)</a>
-<button id="closeViewerButton">ビューワを閉じる(button)</button>
-<div id="closeViewerDiv"><a href="">ビューワを閉じる(div)</a></div>
+	<button id="closeViewerButton">ビューワを閉じる(button)</button>
+	<a href="#" id="closeViewerHrefSharp">ビューワーを閉じる(href#)</a>
+	<a href="" id="closeViewerHref">ビューワーを閉じる(href)</a>
+	<div id="closeViewerDivSharp"><a href="#">ビューワを閉じる(div#)</a></div>
+	<div id="closeViewerDiv"><a href="">ビューワを閉じる(div)</a></div>
 <script type="text/javascript">
-//window.parent.postMessage({action : 'closeViewer'}, 'https://tama.tok.access-company.com');
     var handleEvent = function () {
       try {
-        document.referrer.postMessage({action: 'closeViewer'}, '*');
+       document.referrer.postMessage({action: 'closeViewer'}, '*');
       } catch (e) {
       }
       try {
@@ -34,9 +35,15 @@
     var closeViewerHref = document.getElementById('closeViewerHref');
     closeViewerHref.addEventListener('touchstart', handleEvent);
     closeViewerHref.addEventListener('click', handleEvent);
-    var closeViewerDiv = document.getElementById('closeViewerDiv');
+	var closeViewerHrefSharp = document.getElementById('closeViewerHrefSharp');
+    closeViewerHrefSharp.addEventListener('touchstart', handleEvent);
+    closeViewerHrefSharp.addEventListener('click', handleEvent);
+	var closeViewerDiv = document.getElementById('closeViewerDiv');
     closeViewerDiv.addEventListener('touchstart', handleEvent);
     closeViewerDiv.addEventListener('click', handleEvent);
+	var closeViewerDivSharp = document.getElementById('closeViewerDivSharp');
+    closeViewerDivSharp.addEventListener('touchstart', handleEvent);
+    closeViewerDivSharp.addEventListener('click', handleEvent);
 </script>
 </body>
 </html>
