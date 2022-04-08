@@ -21,10 +21,10 @@
         document.referrer.postMessage({action: 'closeViewer'}, '*');
       } catch (e) {
       }
-      //try {
-      //  parent.window.postMessage({action: 'closeViewer'}, '*');
-      //} catch (e) {
-      //}
+      try {
+        parent.window.postMessage({action: 'closeViewer'}, '*');
+      } catch (e) {
+      }
       return false;
     };
     var closeViewerButton = document.getElementById('closeViewerButton');
