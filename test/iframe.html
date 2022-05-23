@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="https://tama.tok.access-company.com/public/publis/nfbr/tmp/sasaki/master/lib/jquery-1.8.0.custom.js"></script>
+<title>End of book</title>
+</head>
+<body>
+	<div id="paramField">
+		<div id='testString'>巻末iframeテスト(CORS)</div>
+	</div>
+	<button id="closeViewerButton">ビューワを閉じる(button)</button>
+	<a href="#" id="closeViewerHrefSharp">ビューワーを閉じる(href#)</a>
+	<a href="" id="closeViewerHref">ビューワーを閉じる(href)</a>
+ 	<div id="closeViewerDivSharp"><a href="#">ビューワを閉じる(div#)</a></div>
+ 	<div id="closeViewerDiv"><a href="">ビューワを閉じる(div)</a></div>
+ 	<div id="closeViewerDivId"><a href="#closeViewerDivId">ビューワを閉じる(divID)</a></div>
+ 	<div id="closeViewerDivNoExist"><a href="#!">ビューワを閉じる(div!)</a></div>
+ <script type="text/javascript">
+     var handleEvent = function () {
+       try {
+       document.referrer.postMessage({action: 'closeViewer'}, '*');
+      } catch (e) {
+      }
+      try {
+        parent.window.postMessage({action: 'closeViewer'}, '*');
+      } catch (e) {
+      }
+      return false;
+    };
+    var closeViewerButton = document.getElementById('closeViewerButton');
+    closeViewerButton.addEventListener('touchstart', handleEvent);
+    closeViewerButton.addEventListener('click', handleEvent);
+    var closeViewerHref = document.getElementById('closeViewerHref');
+    closeViewerHref.addEventListener('touchstart', handleEvent);
+    closeViewerHref.addEventListener('click', handleEvent);
+	var closeViewerHrefSharp = document.getElementById('closeViewerHrefSharp');
+    closeViewerHrefSharp.addEventListener('touchstart', handleEvent);
+    closeViewerHrefSharp.addEventListener('click', handleEvent);
+	var closeViewerDiv = document.getElementById('closeViewerDiv');
+    closeViewerDiv.addEventListener('touchstart', handleEvent);
+    closeViewerDiv.addEventListener('click', handleEvent);
+	var closeViewerDivSharp = document.getElementById('closeViewerDivSharp');
+    closeViewerDivSharp.addEventListener('touchstart', handleEvent);
+    closeViewerDivSharp.addEventListener('click', handleEvent);
+ 	var closeViewerDivId = document.getElementById('closeViewerDivId');
+     closeViewerDivId.addEventListener('touchstart', handleEvent);
+     closeViewerDivId.addEventListener('click', handleEvent);
+ 		var closeViewerDivNoExist = document.getElementById('closeViewerDivNoExist');
+     closeViewerDivNoExist.addEventListener('touchstart', handleEvent);
+     closeViewerDivNoExist.addEventListener('click', handleEvent);
+ </script>
+ </body>
+ </html>
